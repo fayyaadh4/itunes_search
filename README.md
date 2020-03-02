@@ -14,6 +14,9 @@ Created mock function to test getItems function.
 For server testing run "npm test" in the root/server directory.
 Snapshot test was created for the search form component in the front end directory.
 
+Security:
+Helmet was used to ensure the security of this app.
+
 Link:
 The app was deployed using Heroku and the link is:
 https://itunes-search-app-fn.herokuapp.com/
