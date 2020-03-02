@@ -19,7 +19,10 @@ export default function Items(props) {
           <Col>
             <ul>
               {props.items.map((item, index) => (
-                <Card className="itemCard" style={{backgroundColor: "powderblue"}}>
+                <Card
+                  className="itemCard"
+                  style={{ backgroundColor: "powderblue" }}
+                >
                   <li key={index}>
                     <Row>
                       <Col md={9}>
@@ -41,8 +44,8 @@ export default function Items(props) {
                         <h6>Description: </h6>
                         <p>{item.longDescription}</p>
                       </Col>
-                        <Row>
-                      <Col md={2} style={{margin: "10px"}}>
+                      <Row>
+                        <Col md={2} style={{ margin: "10px" }}>
                           <Button
                             className="favButton"
                             variant="primary"
@@ -51,8 +54,8 @@ export default function Items(props) {
                           >
                             Add to favourites
                           </Button>
-                      </Col>
-                        </Row>
+                        </Col>
+                      </Row>
                     </Row>
                   </li>
                 </Card>

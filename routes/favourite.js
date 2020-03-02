@@ -1,12 +1,12 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 const favourites = [];
 
 //set favourites
-router.get('/api/favourites', function(req,res) {
+router.get("/api/favourites", function(req, res) {
   res.json(favourites);
-})
+});
 
 router.post("/api/favourites", (req, res) => {
   //create new object instance for post request
@@ -15,7 +15,7 @@ router.post("/api/favourites", (req, res) => {
     id: favourites.length + 1,
     //the title, description and url of the new project is entered into the body
     title: req.body.title,
-    description: req.body.description,
+    description: req.body.description
   };
   //the new project is pushed into the favourites array using the push function
   favourites.push(favourite);
