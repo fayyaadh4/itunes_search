@@ -13,3 +13,7 @@ For testing, open frontend directory and run "npm test" to start testing.
 Created mock function to test getItems function.
 For server testing run "npm test" in the root/server directory.
 Snapshot test was created for the search form component in the front end directory.
+
+Link:
+The app was deployed using Heroku and the link is:
+https://itunes-search-app-fn.herokuapp.com/

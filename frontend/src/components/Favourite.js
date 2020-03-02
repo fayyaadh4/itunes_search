@@ -35,6 +35,7 @@ export default function Favourite(props) {
                           </Col>
                           <Col>
                         <h6>{item.trackName}</h6>
+                        <h6>{item.kind}</h6>
                         <Button variant="danger" size="sm" onClick={() => props.removeFavourite(item)}>Remove</Button>
                         </Col>
                         </li>
