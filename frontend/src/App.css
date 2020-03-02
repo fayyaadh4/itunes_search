@@ -1,0 +1,41 @@
+
+.mainTitle {
+  background-color: cadetblue;
+  text-align: center;
+  margin: 15px;
+  padding: 10px;
+  border-bottom: 2px solid;
+}
+
+.footer {
+  margin-top: 390px;
+  border-top: 1px solid;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+.card {
+  padding: 8px;
+  margin: 10px;
+}
+
+.itemImage {
+  float: left;
+  margin-right: 10px;
+}
+
+.favButton {
+  margin: 3px;
+}
+
+.favImg {
+  padding: 0px;
+}
+
+.favList {
+  margin-bottom: 10px;
+  padding: 3px;
+}

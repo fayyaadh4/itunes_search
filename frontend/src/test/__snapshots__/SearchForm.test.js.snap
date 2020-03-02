@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className="container"
+  >
+    <div>
+      <h1
+        className="mainTitle"
+      >
+        Itunes Search App
+      </h1>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-lg col-md-10"
+      >
+        <div
+          className="mb-3 input-group"
+        >
+          <input
+            className="form-control"
+            name="search"
+            onChange={[Function]}
+            placeholder="search..."
+            type="text"
+            value=""
+          />
+          <div
+            className="dropdown input-group-append"
+            onKeyDown={[Function]}
+          >
+            <button
+              aria-expanded={false}
+              aria-haspopup={true}
+              className="dropdown-toggle btn btn-outline-secondary"
+              disabled={false}
+              id=""
+              onClick={[Function]}
+              type="button"
+            >
+              All media
+            </button>
+          </div>
+        </div>
+      </div>
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        onClick={[Function]}
+        type="submit"
+      >
+        Search
+      </button>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+      >
+        <div>
+          <div
+            className="container"
+          >
+            <div
+              className="row"
+            >
+              <h2>
+                Items
+              </h2>
+            </div>
+            <div
+              className="row"
+            >
+              <div
+                className="col"
+              >
+                <ul />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-lg-3"
+      >
+        <div>
+          <div
+            className="container"
+          >
+            <h2>
+              Favourites
+            </h2>
+            <div
+              className="card"
+              style={
+                Object {
+                  "backgroundColor": "lightblue",
+                }
+              }
+            >
+              <div
+                className="row"
+              >
+                <ul />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="footer"
+      >
+        <h6>
+          Itunes search app created using React.js, Node.js, Express, HTML, CSS and Javascript.
+        </h6>
+      </div>
+    </div>
+  </div>
+</div>
+`;
