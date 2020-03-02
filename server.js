@@ -7,7 +7,6 @@ const bodyParser = require("body-parser");
 
 const searchMedia = require('./routes/searchMedia');
 const searchAll = require('./routes/searchAll');
-const welcome = require('./routes/welcome');
 const favourite = require('./routes/favourite');
 const getList = require('./routes/getList');
 
@@ -21,7 +20,6 @@ app.use(bodyParser.json());
 
 app.get("/search/:term/:media", searchMedia);
 app.get("/search/:term", searchAll);
-app.get("/", welcome);
 app.get("/api/batman", getList);
 app.get("/api/favourites", favourite);
 

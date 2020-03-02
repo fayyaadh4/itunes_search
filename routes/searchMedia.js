@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 
 //search for item by movie entity
 //use params to get data from client side and pass to server
-router.get("/search/:term/:media", async (req, res) => {
+router.get("/", async (req, res) => {
   const term = req.params.term;
   const media = req.params.media;
   fetch(`https://itunes.apple.com/search?term=${term}&entity=${media}`)
