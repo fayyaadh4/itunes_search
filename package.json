@@ -6,11 +6,11 @@
   "scripts": {
     "frontend-install": "cd frontend && npm install",
     "test": "mocha",
-    "servStart": "node server.js",
+    "start": "node server.js",
     "server": "nodemon server.js",
     "frontend": "npm start --prefix frontend",
-    "start": "concurrently \"npm run server\" \"npm run frontend\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
+    "heroku-postbuild": "cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "author": "",
   "license": "ISC",

@@ -100,12 +100,13 @@ app.get("/api/batman", (req, res) => {
     });
 });
 
+/*
 //error handler. '*' catces every undefined route and error message gets displayed
 app.get('*', function(request, response, next) {
   let err = new Error("Sorry! Can’t find that resource. Please check your URL");
   err.statusCode = 404;
   next(err);
-})
+})*/
 
 
 module.exports = app;
