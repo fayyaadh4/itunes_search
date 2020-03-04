@@ -9,6 +9,7 @@ const searchMedia = require("./routes/searchMedia");
 const searchAll = require("./routes/searchAll");
 const favourite = require("./routes/favourite");
 const getList = require("./routes/getList");
+const LoadMore = require("./routes/LoadMore");
 
 //fetch module
 const fetch = require("node-fetch");
@@ -21,6 +22,7 @@ app.get("/search/:term/:media", searchMedia);
 app.get("/search/:term", searchAll);
 app.get("/api/batman", getList);
 app.get("/api/favourites", favourite);
+app.get("/search/:term/:media/:limit", LoadMore)
 
 //helmet module provides  a bit of security
 const helmet = require("helmet");

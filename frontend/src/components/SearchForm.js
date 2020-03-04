@@ -25,7 +25,8 @@ export default class SearchForm extends React.Component {
       newQuery: "",
       newGenre: "",
       isLoaded: true,
-      error: null
+      error: null,
+      limit: 200
     };
   }
 
@@ -80,6 +81,50 @@ export default class SearchForm extends React.Component {
     );
   };
 
+  loadMore = e => {
+    console.log("button clicked")
+    e.preventDefault();
+    const term = this.state.newQuery;
+    const media = this.state.newGenre;
+    const limit = this.state.limit;
+    if (media) {
+      console.log(media, limit);
+      fetch(`/search/${term}/${media}/${limit}`)
+      .then(res => res.json())
+      .then(
+        items => {
+          console.log(items);
+          this.setState({
+            items: items.items.results
+          }, () => console.log("limit", items.items.results))
+        }
+      )
+    }  else {
+      console.log(media);
+      //function which fetches data from server
+      fetch(`/search/${term}`)
+        .then(res => res.json())
+        .then(
+          items => {
+            console.log(items);
+            this.setState(
+              {
+                //sets data recieved to items empty array
+                items: items.items.results
+              },
+              () => console.log(items.items.results)
+            );
+          },
+          //returns error
+          error => {
+            this.setState({
+              error
+            });
+          }
+        );
+    }
+
+  }
   //main function whichh handles search from user
   //this function sends the data from the client side to the server fetching the data and then recieving the data back from the server
   handleSearch = e => {
@@ -233,6 +278,9 @@ export default class SearchForm extends React.Component {
                   removeFavourite={this.removeFavourite}
                 ></Favourite>
               </Col>
+            </Row>
+            <Row>
+              <Button variant="secondary" onClick={this.loadMore}>Load More</Button>
             </Row>
             <Row>
               <Footer></Footer>

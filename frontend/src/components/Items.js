@@ -40,6 +40,7 @@ export default function Items(props) {
                           />
                         </a>
                         <h5>{item.trackName}</h5>
+                        <span><h6>Release Date: </h6><p>{item.releaseDate.slice(0, 10)}</p></span>
                         <h6>Kind: {item.kind}</h6>
                         <h6>Description: </h6>
                         <p>{item.longDescription}</p>

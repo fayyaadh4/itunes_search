@@ -2,11 +2,12 @@ const express = require("express");
 const router = express.Router();
 const fetch = require("node-fetch");
 
-//used to check if data is being passed. this works
-router.get("/api/batman", (req, res) => {
-  const term = "lil wayne";
-  const media="";
-  const limit=200;
+//search for item by movie entity
+//use params to get data from client side and pass to server
+router.get("/search/:term/:media/:limit", async (req, res) => {
+  const term = req.params.term;
+  const media = req.params.media;
+  const limit = req.params.limit;
   fetch(`https://itunes.apple.com/search?term=${term}&entity=${media}&limit=${limit}`)
     .then(res => res.json())
     .then(items => res.send({ items }))
