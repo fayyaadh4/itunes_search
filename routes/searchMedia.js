@@ -7,7 +7,7 @@ const fetch = require("node-fetch");
 router.get("/search/:term/:media", async (req, res) => {
   const term = req.params.term;
   const media = req.params.media;
-  fetch(`https://itunes.apple.com/search?term=${term}&entity=${media}`)
+  fetch(`https://itunes.apple.com/search?term=${term}&media=${media}`)
     .then(res => res.json())
     .then(items => res.send({ items }))
     .catch(error => {

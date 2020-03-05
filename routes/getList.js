@@ -5,9 +5,9 @@ const fetch = require("node-fetch");
 //used to check if data is being passed. this works
 router.get("/api/batman", (req, res) => {
   const term = "lil wayne";
-  const media="";
-  const limit=200;
-  fetch(`https://itunes.apple.com/search?term=${term}&entity=${media}&limit=${limit}`)
+  const media="all";
+  const limit=300;
+  fetch(`https://itunes.apple.com/search?term=${term}&media=${media}&limit=${limit}`)
     .then(res => res.json())
     .then(items => res.send({ items }))
     .catch(error => {

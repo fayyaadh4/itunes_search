@@ -210,7 +210,7 @@ export default class SearchForm extends React.Component {
                     as={InputGroup.Append}
                     variant="outline-secondary"
                     title="All media"
-                    id=""
+                    id="all"
                   >
                     <Dropdown.Item
                       id="movie"
@@ -220,14 +220,14 @@ export default class SearchForm extends React.Component {
                       Movies
                     </Dropdown.Item>
                     <Dropdown.Item
-                      id="song"
+                      id="music"
                       value="music"
                       onClick={this.handleGenreChange}
                     >
                       Music
                     </Dropdown.Item>
                     <Dropdown.Item
-                      id="tvEpisode"
+                      id="tvShow"
                       value="tv-episode"
                       onClick={this.handleGenreChange}
                     >

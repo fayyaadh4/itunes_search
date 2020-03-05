@@ -8,7 +8,7 @@ router.get("/search/:term/:media/:limit", async (req, res) => {
   const term = req.params.term;
   const media = req.params.media;
   const limit = req.params.limit;
-  fetch(`https://itunes.apple.com/search?term=${term}&entity=${media}&limit=${limit}`)
+  fetch(`https://itunes.apple.com/search?term=${term}&media=${media}&limit=${limit}`)
     .then(res => res.json())
     .then(items => res.send({ items }))
     .catch(error => {
