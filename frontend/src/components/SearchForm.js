@@ -86,7 +86,7 @@ export default class SearchForm extends React.Component {
     e.preventDefault();
     const term = this.state.newQuery;
     const media = this.state.newGenre;
-    const limit = this.state.limit;
+    const limit = 200;
     if (media) {
       console.log(media, limit);
       fetch(`/search/${term}/${media}/${limit}`)

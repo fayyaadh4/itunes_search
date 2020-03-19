@@ -6,7 +6,7 @@ const fetch = require("node-fetch");
 router.get("/api/batman", (req, res) => {
   const term = "lil wayne";
   const media="all";
-  const limit=300;
+  const limit=200;
   fetch(`https://itunes.apple.com/search?term=${term}&media=${media}&limit=${limit}`)
     .then(res => res.json())
     .then(items => res.send({ items }))
